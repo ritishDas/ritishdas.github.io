@@ -1,0 +1,6 @@
+# robots.txt for ritish.site
+
+User-agent: *
+Disallow:
+
+Sitemap: https://ritish.site/sitemap.xml

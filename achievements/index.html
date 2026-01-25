@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritish Das Achievements</title>
+    <link href="../style.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo.png" />
+    <meta name="description" content="Ritish Das - Full-Stack Developer Portfolio. Showcasing projects, skills, and achievements in web development.">
+
+    <script src="../gardener.js"> </script>
+  </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HB5SJ84RJH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HB5SJ84RJH');
+</script>
+  <body class="min-h-screen bg-background-50 text-text-900">
+<nav class="fixed top-3 left-1/2 -translate-x-1/2 w-[90%] bg-background-100/80 backdrop-blur border border-primary-600 rounded-xl px-6 py-3 flex items-center justify-between z-50">
+  <!-- Logo -->
+  <a href="/" class="flex-shrink-0">
+    <img class="w-10" src="../assets/logo.png" alt="logo">
+  </a>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden md:flex space-x-8 text-sm font-medium">
+    <li><a href="/experience" class="hover:text-accent-400">Experience</a></li>
+    <li><a href="/projects" class="hover:text-accent-400">Projects</a></li>
+    <li><a href="/achievements" class="hover:text-accent-400">Achievements</a></li>
+    <li><a href="/moments" class="hover:text-accent-400">Moments</a></li>
+  </ul>
+
+  <!-- Desktop Social -->
+  <ul class="hidden md:flex space-x-6">
+    <li><a href="https://github.com/ritishDas" class="flex items-center gap-2 hover:text-accent-400"><img class="w-6" src="../assets/github.svg" alt="github">Github</a></li>
+    <li><a href="https://leetcode.com/u/ritishDas/" class="flex items-center gap-2 hover:text-accent-400"><img class="w-6" src="../assets/leetcode.svg" alt="leetcode">LeetCode</a></li>
+  </ul>
+
+  <!-- Mobile Menu Button -->
+      <div id="menu-btn" class="md:hidden flex items-center gap-4">
+    <a href="https://github.com/ritishDas"><img class="w-6" src="../assets/github.svg" alt="github"></a>
+    <a href="https://leetcode.com/u/ritishDas/"><img class="w-6" src="../assets/leetcode.svg" alt="leetcode"></a>
+  <button  class="p-2 rounded-md hover:bg-background-500">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+      </div>
+</nav>
+
+<!-- Mobile Dropdown -->
+<div id="mobile-menu" class="hidden flex-col items-center w-[90%] gap-4 fixed bg-background-100/80 backdrop-blur border border-primary-600 rounded-xl left-7 top-20 py-6 md:hidden">
+  <div class="flex flex-col gap-6 mt-4 items-center">
+  <a href="/experience" class="hover:text-accent-400">Experience</a>
+  <a href="/projects" class="hover:text-accent-400">Projects</a>
+  <a href="/achievements" class="hover:text-accent-400">Achievements</a>
+  <a href="/moments" class="hover:text-accent-400">Moments</a>
+  </div>
+</div>
+
+    <script>
+document.getElementById("menu-btn").addEventListener("click", () => {
+  console.log("clicked");
+  document.getElementById("mobile-menu").classList.toggle("hidden");
+});
+    </script>
+<h1 class="text-3xl font-bold m-30 mb-20">My Achievements</h1>
+    <div id="imageViewer"> </div>
+<div id="achievements"> </div>
+<footer class="w-full bg-background-450 text-gray-300 py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+    
+    <!-- Navigation Links -->
+    <ul class="flex flex-wrap justify-center md:justify-start gap-6 text-sm font-medium">
+      <li><a href="/experience" class="hover:text-primary-400 transition">Experience</a></li>
+      <li><a href="/projects" class="hover:text-primary-400 transition">Projects</a></li>
+      <li><a href="/achievements" class="hover:text-primary-400 transition">Achievements</a></li>
+      <li><a href="/moments" class="hover:text-primary-400 transition">Moments</a></li>
+    </ul>
+
+    <!-- Social Icons -->
+    <ul class="flex gap-6 justify-center md:justify-end">
+      <li>
+        <a href="https://github.com/ritishDas" class="hover:scale-110 transition transform">
+          <img src="../assets/github.svg" alt="GitHub" class="w-6 h-6">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/ritish-das-979536277" class="hover:scale-110 transition transform">
+          <img src="../assets/linkedin.svg" alt="LinkedIn" class="w-6 h-6">
+        </a>
+      </li>
+      <li>
+        <a href="https://x.com/ritishDas116" class="hover:scale-110 transition transform">
+          <img src="../assets/x.svg" alt="X (Twitter)" class="w-6 h-6">
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Divider -->
+  <div class="border-t border-gray-700 mt-8 pt-6 text-center text-xs text-gray-500">
+    © 2025 Ritish Das. All rights reserved.
+  </div>
+</footer>
+    <script src="../database/db.js"> </script>
+    <script src="script.js"> </script>
+  </body>
+</html>

@@ -1,32 +1,176 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!doctype html>
+<html>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: white;
-            background: #007bff;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-    <h1>GitHub Pages is Working!</h1>
-    <p>If you see this, your site is set up correctly.</p>
-    <a href="https://aniketdhakate007.github.io/ConfWeb/">Go to ConfWeb</a>
-</body>
+    <title>Ritish Das Portfolio</title>
+    <link href="./style.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/logo.png" />
+    <meta name="description" content="Ritish Das - Full-Stack Developer Portfolio. Showcasing projects, skills, and achievements in web development.">
+    <script src="gardener.js"> </script>
+  </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HB5SJ84RJH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HB5SJ84RJH');
+</script>
+<body class="min-h-screen bg-background-50 text-text-900">
+
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] bg-background-100/80 backdrop-blur border border-primary-600 rounded-xl px-6 py-3 flex items-center justify-between z-50">
+  <!-- Logo -->
+  <a href="/" class="flex-shrink-0">
+    <img class="w-10" src="assets/logo.png" alt="logo">
+  </a>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden md:flex space-x-8 text-sm font-medium">
+    <li><a href="/experience" class="hover:text-accent-400">Experience</a></li>
+    <li><a href="/projects" class="hover:text-accent-400">Projects</a></li>
+    <li><a href="/achievements" class="hover:text-accent-400">Achievements</a></li>
+    <li><a href="/moments" class="hover:text-accent-400">Moments</a></li>
+  </ul>
+
+  <!-- Desktop Social -->
+  <ul class="hidden md:flex space-x-6">
+    <li><a href="https://github.com/ritishDas" class="flex items-center gap-2 hover:text-accent-400"><img class="w-6" src="assets/github.svg" alt="github">Github</a></li>
+    <li><a href="https://leetcode.com/u/ritishDas/" class="flex items-center gap-2 hover:text-accent-400"><img class="w-6" src="assets/leetcode.svg" alt="leetcode">LeetCode</a></li>
+  </ul>
+
+  <!-- Mobile Menu Button -->
+      <div id="menu-btn" class="md:hidden flex items-center gap-4">
+    <a href="https://github.com/ritishDas"><img class="w-6" src="assets/github.svg" alt="github"></a>
+    <a href="https://leetcode.com/u/ritishDas/"><img class="w-6" src="assets/leetcode.svg" alt="leetcode"></a>
+  <button  class="p-2 rounded-md hover:bg-background-500">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+      </div>
+</nav>
+
+<!-- Mobile Dropdown -->
+<div id="mobile-menu" class="hidden flex-col items-center w-[90%] gap-4 fixed bg-background-100/80 backdrop-blur border border-primary-600 rounded-xl left-7 top-20 py-6 md:hidden">
+  <div class="flex flex-col gap-6 mt-4 items-center">
+  <a href="/experience" class="hover:text-accent-400">Experience</a>
+  <a href="/projects" class="hover:text-accent-400">Projects</a>
+  <a href="/achievements" class="hover:text-accent-400">Achievements</a>
+  <a href="/moments" class="hover:text-accent-400">Moments</a>
+  </div>
+</div>
+
+    <script>
+document.getElementById("menu-btn").addEventListener("click", () => {
+  console.log("clicked");
+  document.getElementById("mobile-menu").classList.toggle("hidden");
+});
+    </script>
+  <!-- Hero Section -->
+  <section class="pt-32 md:pt-40 flex flex-col md:flex-row items-center justify-center gap-12 px-6">
+    <!-- Left -->
+    <div class="max-w-xl text-center md:text-left space-y-6">
+      <h1 class="font-extrabold text-4xl md:text-5xl">Ritish Das</h1>
+      <h2 class="font-bold text-2xl md:text-3xl">Full-Stack Developer</h2>
+      <h4 class="font-semibold text-lg text-text-700">
+        Crafting robust and elegant solutions from concept to deployment.
+      </h4>
+      <p class="text-text-600 leading-relaxed">
+        With a passion for innovation and a keen eye for detail, I build high-performance web applications 
+        that deliver exceptional user experience. My expertise spans across modern front-end frameworks, 
+        scalable back-end services, and efficient database management.
+      </p>
+      <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+        <a href="/projects" class="flex items-center gap-2 font-bold 
+                          bg-accent-400 text-text-50 px-5 py-2 rounded-md 
+                          hover:bg-accent-500 transition">
+          View My Projects <img class="w-5" src="assets/arrow.svg" alt="arrow">
+        </a>
+        <a href="/assets/resume.pdf" download class="flex items-center gap-2 font-bold 
+                          bg-primary-400 text-text-50 px-5 py-2 rounded-md 
+                          hover:bg-primary-500 transition">
+          Download Resume <img class="w-5" src="assets/resume.svg" alt="resume">
+        </a>
+      </div>
+    </div>
+    <!-- Right -->
+    <div class="flex flex-col items-center gap-5">
+      <img src="assets/profile.jpg" class="rounded-3xl w-64 md:w-80 border-2 border-accent-600 shadow-lg" alt="profile picture">
+      <ul class="flex gap-5">
+        <li><a href="https://www.linkedin.com/in/ritish-das-979536277"><img class="w-8 md:w-10" src="assets/linkedin.svg" alt="linkedin"></a></li>
+        <li><a href="https://x.com/ritishDas116"><img class="w-8 md:w-10" src="assets/x.svg" alt="x"></a></li>
+        <li><a href="mailto:ritishdas116@outlook.com"><img class="w-8 md:w-10" src="assets/email.svg" alt="email"></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="mt-20 bg-background-100 py-12 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">My Technical Skills</h2>
+    <div id="skills" class="max-w-5xl mx-auto"></div>
+  </section>
+
+  <!-- GitHub & LeetCode -->
+    <section class="flex lg:flex-row justify-around items-start my-20 p-6 flex-wrap gap-12">
+    <div class="w-full lg:w-2/5 text-center grow-0">
+      <h2 class="font-bold text-2xl md:text-3xl mb-6">GitHub Contribution Grid</h2>
+        <a class="mx-auto" href="https://github.com/ritishDas">
+      <img src="https://ghchart.rshah.org/ritishDas" class="w-250 " alt="GitHub chart">
+        </a>
+    </div>
+    <div class="w-full lg:w-2/5 text-center grow-0">
+      <h2 class="font-bold text-2xl md:text-3xl mb-6">LeetCode Stats</h2>
+        <a href="https://leetcode.com/u/ritishDas/" class="mx-auto w-full max-w-md">
+      <img src="https://leetcard.jacoblin.cool/ritishDas" class="mx-auto w-full max-w-md" alt="leetcode chart">
+        </a>
+    </div>
+  </section>
+
+  <!-- Featured Works -->
+  <section class="mt-20 bg-background-100 py-12 px-6">
+    <h2 class="text-center font-bold text-3xl mb-12">Featured Works And Achievements</h2>
+    <div id="featured" class="max-w-6xl mx-auto"></div>
+  </section>
+
+<footer class="w-full bg-background-450 text-gray-300 py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+    
+    <!-- Navigation Links -->
+    <ul class="flex flex-wrap justify-center md:justify-start gap-6 text-sm font-medium">
+      <li><a href="/experience" class="hover:text-primary-400 transition">Experience</a></li>
+      <li><a href="/projects" class="hover:text-primary-400 transition">Projects</a></li>
+      <li><a href="/achievements" class="hover:text-primary-400 transition">Achievements</a></li>
+      <li><a href="/moments" class="hover:text-primary-400 transition">Moments</a></li>
+    </ul>
+
+    <!-- Social Icons -->
+    <ul class="flex gap-6 justify-center md:justify-end">
+      <li>
+        <a href="https://github.com/ritishDas" class="hover:scale-110 transition transform">
+          <img src="assets/github.svg" alt="GitHub" class="w-6 h-6">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/ritish-das-979536277" class="hover:scale-110 transition transform">
+          <img src="assets/linkedin.svg" alt="LinkedIn" class="w-6 h-6">
+        </a>
+      </li>
+      <li>
+        <a href="https://x.com/ritishDas116" class="hover:scale-110 transition transform">
+          <img src="assets/x.svg" alt="X (Twitter)" class="w-6 h-6">
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Divider -->
+  <div class="border-t border-gray-700 mt-8 pt-6 text-center text-xs text-gray-500">
+    © 2025 Ritish Das. All rights reserved.
+  </div>
+</footer>
+    <script src="database/db.js"> </script>
+    <script src="script.js"> </script>
+  </body>
 </html>
