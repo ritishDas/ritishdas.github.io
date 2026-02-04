@@ -1,25 +1,12 @@
-const allImages = [];
-const database = db.moments;
-//console.log(database[0]);
-database.forEach(entry => {
-  entry.forEach(event=>{
-      event.photos.forEach(pic=>{
-        if(typeof(pic)==='string')
-        allImages.push(pic)
-        else {
-          allImages.push(pic.img)
-        }
-      })
-    })
-})
+import { db } from '/database/db.js'
+import { fetchElement, gardener, replaceElement, appendElement } from '/gardener.js'
 
-//console.log(allImages);
-imagePreloader(allImages)
+
 const timeline = fetchElement('#timeline');
 
 document.addEventListener('scroll', () => {
   const scrollPos = window.scrollY; // current scroll offset from top
-  
+
   timeline.style.height = `${scrollPos + 100}px`;
 });
 
@@ -29,16 +16,19 @@ function momentGen(moments, index) {
   const parent = fetchElement('#moments');
   const yearbtn = fetchElement('#yearbtn');
   const newYearbtn = gardener({
-    t:'ul',
+    t: 'ul',
     attr: { id: 'yearbtn' },
-    cn: ['flex', 'w-full', 'gap-4', 'md:gap-6', 'p-4', 'fixed', 'z-20', 'overflow-x-auto', 'text-lg', 'font-medium', 'text-gray-700']
+    cn: ['flex', 'w-full', 'gap-4', 'md:gap-6', 'p-4', 'fixed', 'z-2', 'overflow-x-auto', 'text-lg', 'font-medium', 'text-gray-700']
   });
 
-  for(let i = 0; i<4; i++) {
+  for (let i = 0; i < 4; i++) {
     appendElement(newYearbtn, gardener({
-      t:'li',
+      t: 'li',
       txt: `Year ${i + 1}`,
-      onclick: () => { momentGen(db.moments[i], i) },
+      events: {
+        click: () => { momentGen(db.moments[i], i) }
+      }
+      ,
       cn: ['cursor-pointer', 'px-4', 'py-2', 'bg-gray-100', 'rounded-lg', 'hover:bg-gray-200', 'transition'],
       attr: { style: (i === index ? 'background:red;' : '') }
     }));
@@ -64,7 +54,9 @@ function momentGen(moments, index) {
       t: 'img',
       attr: { src: `../${moment.photos[0]}` },
       cn: ['w-full', 'object-cover', 'rounded-lg', 'cursor-pointer', 'shadow-lg'],
-      onclick: () => { imageViewer(moment.photos, 0) }
+      events: {
+        click: () => { imageViewer(moment.photos, 0) }
+      }
     });
 
     const seeMore = gardener({
@@ -74,7 +66,10 @@ function momentGen(moments, index) {
         'mt-2', 'text-lg', 'bg-blue-500', 'cursor-pointer',
         'hover:underline', 'transition', 'p-2', 'rounded-sm'
       ],
-      onclick: () => { imageViewer(moment.photos, 0) }
+      events: {
+        click: () => { imageViewer(moment.photos, 0) }
+      }
+
     });
 
     appendElement(imageWrapper, image);
@@ -134,7 +129,7 @@ function imageViewer(images, imagesliderindex) {
       "w-screen", "h-screen",
       "flex", "justify-center", "items-center",
       "bg-black/80",
-      "z-50"
+      "z-10"
     ]
   });
 
@@ -189,7 +184,9 @@ function imageViewer(images, imagesliderindex) {
       "bg-black/40", "hover:bg-black/70", "rounded-full",
       "px-4", "py-2", "transition", "duration-200"
     ],
-    onclick: () => updateImage(imagesliderindex - 1)
+    events: {
+      click: () => updateImage(imagesliderindex - 1)
+    }
   });
 
   const nextButton = gardener({
@@ -200,7 +197,9 @@ function imageViewer(images, imagesliderindex) {
       "bg-black/40", "hover:bg-black/70", "rounded-full",
       "px-4", "py-2", "transition", "duration-200"
     ],
-    onclick: () => updateImage(imagesliderindex + 1)
+    events: {
+      click: () => updateImage(imagesliderindex + 1)
+    }
   });
 
   const closeButton = gardener({
@@ -216,7 +215,9 @@ function imageViewer(images, imagesliderindex) {
       "transition", "duration-200",
       "cursor-pointer", "select-none"
     ],
-    onclick: () => closeSlider()
+    events: {
+      click: () => closeSlider()
+    }
   });
 
   if (captionElement) appendElement(imageWrapper, captionElement);

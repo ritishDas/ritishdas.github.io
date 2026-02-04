@@ -1,42 +1,49 @@
+import { db } from '/database/db.js'
+import { fetchElement, gardener, replaceElement, appendElement } from '/gardener.js'
+
 const achievements = fetchElement('#achievements');
 
 const database = db.achievements.awards;
-const allimages=[];
-database.forEach(entry=>{
-  entry.pics.forEach(pic=>{allimages.push(pic)})
+const allimages = [];
+database.forEach(entry => {
+  entry.pics.forEach(pic => { allimages.push(pic) })
 })
 console.log(allimages)
-imagePreloader(allimages);
-const awardDiv = gardener({t:'div',
-  cn:[ 'flex', 'justify-center', 'flex-wrap']
+const awardDiv = gardener({
+  t: 'div',
+  cn: ['flex', 'justify-center', 'flex-wrap']
 });
 
 database.forEach(award => {
-appendElement(awardDiv, gardener({
-    t:'div',
-    cn:['flex', 'flex-col', 'justify-between', 'm-4', 'p-4', 'border', 'rounded-md', 'w-100'],
-    children:[
+  appendElement(awardDiv, gardener({
+    t: 'div',
+    cn: ['flex', 'flex-col', 'justify-between', 'm-4', 'p-4', 'border', 'rounded-md', 'w-100'],
+    children: [
       {
-        t:'h3',
-        cn:["font-bold", 'text-2xl', 'my-5'],
-        txt:award.title
+        t: 'img',
+        attr: {
+          src: award.pics[0],
+          alt: award.pics[0],
+        },
+        events: {
+          click: () => { imageViewer(award.pics, 0) }
+        }
       },
       {
-        t:'span',
-        cn:['italic', 'text-gray-600'],
-        txt:award.issued
+        t: 'h3',
+        cn: ["font-bold", 'text-2xl', 'my-5'],
+        txt: award.title
       },
       {
-        t:'p',
-        cn:['my-2'],
-        txt:award.description
+        t: 'span',
+        cn: ['italic', 'text-gray-600'],
+        txt: award.issued
       },
       {
-        t:'button',
-        txt:'Pictures',
-        cn:['my-2', 'p-2', 'rounded-md', 'bg-accent-700', 'w-full', 'text-black'],
-        onclick:() => {imageViewer(award.pics, 0)}
-      }
+        t: 'p',
+        cn: ['my-2'],
+        txt: award.description
+      },
     ]
   }));
 })

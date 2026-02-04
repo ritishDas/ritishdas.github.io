@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritish Das Portfolio</title>
     <link href="./style.css" rel="stylesheet">
+    <link href="./style2.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/logo.png" />
     <meta name="description" content="Ritish Das - Full-Stack Developer Portfolio. Showcasing projects, skills, and achievements in web development.">
-    <script src="gardener.js"> </script>
   </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HB5SJ84RJH"></script>
@@ -52,6 +52,8 @@
       </div>
 </nav>
 
+
+
 <!-- Mobile Dropdown -->
 <div id="mobile-menu" class="hidden flex-col items-center w-[90%] gap-4 fixed bg-background-100/80 backdrop-blur border border-primary-600 rounded-xl left-7 top-20 py-6 md:hidden">
   <div class="flex flex-col gap-6 mt-4 items-center">
@@ -82,6 +84,7 @@ document.getElementById("menu-btn").addEventListener("click", () => {
         that deliver exceptional user experience. My expertise spans across modern front-end frameworks, 
         scalable back-end services, and efficient database management.
       </p>
+
       <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
         <a href="/projects" class="flex items-center gap-2 font-bold 
                           bg-accent-400 text-text-50 px-5 py-2 rounded-md 
@@ -106,6 +109,13 @@ document.getElementById("menu-btn").addEventListener("click", () => {
     </div>
   </section>
 
+    <!-- Current Work -->
+    <section class='mt-20 py-12 px-6'>
+<h2 class='text-3xl font-bold m-10'>Current Working</h2>
+
+<div id='currentwork' class='bg-gray-700 rounded-xl p-3'>
+</div>
+    </section>
   <!-- Skills -->
   <section class="mt-20 bg-background-100 py-12 px-6">
     <h2 class="text-3xl font-bold text-center mb-10">My Technical Skills</h2>
@@ -127,6 +137,7 @@ document.getElementById("menu-btn").addEventListener("click", () => {
         </a>
     </div>
   </section>
+
 
   <!-- Featured Works -->
   <section class="mt-20 bg-background-100 py-12 px-6">
@@ -170,7 +181,6 @@ document.getElementById("menu-btn").addEventListener("click", () => {
     © 2025 Ritish Das. All rights reserved.
   </div>
 </footer>
-    <script src="database/db.js"> </script>
-    <script src="script.js"> </script>
+    <script src="script.js" type='module'> </script>
   </body>
 </html>
