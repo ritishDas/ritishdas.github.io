@@ -61,7 +61,7 @@ export default function currentwork(name, time, description) {
           "cn": [
             "text-gray-300",
             "text-sm",
-            "m-2",
+            "my-2",
             "font-light"
           ],
           "txt": description
