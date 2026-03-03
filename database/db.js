@@ -54,13 +54,13 @@ export const db = {
     ]
   },
   featured: [
- {
+    {
       title: "Gardener",
       img: "assets/gardener.jpg",
       description: "A json based dom generator, uses recursion to generate a full dom tree of elements along with its styles and attributes, can be used in small projects where react is overkill.",
-      link: "https://www.npmjs.com/package/create-gardener"
+      link: "https://gardener.ritish.site"
     }
-  ,  {
+    , {
       title: "Astm",
       img: "assets/astm.jpg",
       description: "An asset manager that saves assets like web components, code snippets, icons etc locally on your machine while also maintaining a backup on github.",
@@ -72,7 +72,7 @@ export const db = {
       description: "A full-featured e-commerce platform with user authentication, product management, and payment integration.",
       link: "https://github.com/ritishDas/portfolio"
     },
-   
+
   ],
   experience: {
     professional: [],
@@ -120,11 +120,11 @@ export const db = {
     ]
   },
   projects: [
-{
+    {
       title: "Gardener",
       img: "assets/gardener.jpg",
       description: "A json based dom generator, uses recursion to generate a full dom tree of elements along with its styles and attributes, can be used in small projects where react is overkill.",
-      link: "https://www.npmjs.com/package/create-gardener",
+      link: "https://gardener.ritish.site",
       github: "https://github.com/ritishDas/gardener",
       tech: ["JS"]
     },
@@ -137,7 +137,7 @@ export const db = {
       github: "https://github.com/ritishDas/portfolio",
       tech: ["HTML", "CSS", "JS", "gardener (my library)"]
     },
-    
+
     {
       title: "Astm",
       img: "assets/astm.jpg",
