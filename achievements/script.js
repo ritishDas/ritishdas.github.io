@@ -9,6 +9,7 @@ database.forEach(entry => {
   entry.pics.forEach(pic => { allimages.push(pic) })
 })
 console.log(allimages)
+
 const awardDiv = gardener({
   t: 'div',
   cn: ['flex', 'justify-center', 'flex-wrap']
@@ -117,7 +118,9 @@ function imageViewer(images, imagesliderindex) {
       "bg-black/40", "hover:bg-black/70", "rounded-full",
       "px-4", "py-2", "transition", "duration-200"
     ],
-    onclick: () => updateImage(imagesliderindex - 1)
+    events: {
+      click: () => updateImage(imagesliderindex - 1)
+    }
   });
 
   const nextButton = gardener({
@@ -128,7 +131,9 @@ function imageViewer(images, imagesliderindex) {
       "bg-black/40", "hover:bg-black/70", "rounded-full",
       "px-4", "py-2", "transition", "duration-200"
     ],
-    onclick: () => updateImage(imagesliderindex + 1)
+    events: {
+      click: () => updateImage(imagesliderindex + 1)
+    }
   });
 
   const closeButton = gardener({
@@ -144,7 +149,9 @@ function imageViewer(images, imagesliderindex) {
       "transition", "duration-200",
       "cursor-pointer", "select-none"
     ],
-    onclick: () => closeSlider()
+    events: {
+      click: () => closeSlider()
+    }
   });
 
   if (captionElement) appendElement(imageWrapper, captionElement);
