@@ -23,6 +23,8 @@ export default function currentwork(name, time, description) {
               "flex",
               "text-green-500",
               "gap-1",
+              "relative",
+              "z-1",
               "items-center",
               "m-4",
               "blinking"
