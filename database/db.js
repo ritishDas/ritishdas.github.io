@@ -56,7 +56,7 @@ export const db = {
   featured: [
     {
       title: 'Pushpraj lifestyle',
-      img: 'assets/pushpraj.png',
+      img: 'assets/pushpraj.webp',
       description: 'An ecommerce website built for a local store pushpraj lifestyle here in nagpur',
       link: "https://pushprajlifestyle.in"
     },
@@ -132,7 +132,7 @@ export const db = {
 
     {
       title: 'Pushpraj lifestyle',
-      img: 'assets/pushpraj.png',
+      img: 'assets/pushpraj.webp',
       description: 'An ecommerce website built for a local store pushpraj lifestyle here in nagpur.',
       link: "https://pushprajlifestyle.in",
       github: "",
