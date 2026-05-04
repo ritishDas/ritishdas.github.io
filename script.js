@@ -143,4 +143,5 @@ replaceElement(featuredParent, container);
 //
 
 
-replaceElement(fetchElement('#currentwork'), currentwork(db.current.title, db.current.date, db.current.description))
+if (db.current)
+  replaceElement(fetchElement('#currentwork'), currentwork(db.current.title, db.current.date, db.current.description))

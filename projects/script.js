@@ -2,7 +2,8 @@ import currentwork from '../components/currentwork.js';
 import { db } from '/database/db.js'
 import { fetchElement, gardener, replaceElement, appendElement } from '/gardener.js'
 
-replaceElement(fetchElement('#currentwork'), currentwork(db.current.title, db.current.date, db.current.description))
+if (db.current)
+  replaceElement(fetchElement('#currentwork'), currentwork(db.current.title, db.current.date, db.current.description))
 const projectDiv = fetchElement("#projects");
 
 const projectContainer = gardener({

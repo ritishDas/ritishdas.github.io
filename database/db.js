@@ -16,11 +16,11 @@ export const db = {
     Backend: [
       "Node.js",
       "Express",
-      "GraphQL",
       "REST APIs",
       "MongoDB",
       "PostgreSQL",
       "Prisma",
+      "drizzle",
       "Authentication (JWT, OAuth)",
       "WebSockets"
     ],
@@ -28,10 +28,10 @@ export const db = {
     Devops: [
       "Linux / Bash",
       "Git & GitHub",
-      //  "Docker",
+      "Docker",
       //   "Kubernetes",
+      // "GraphQL",
       //  "Nginx",
-
       //   "Azure",
       "Google Cloud Platform (GCP)",
     ],
@@ -40,7 +40,7 @@ export const db = {
       // "Mocha / Chai",
       // "React Testing Library",
       //  "Cypress",
-      // "Playwright",
+      "Playwright",
       "Postman / Newman"
     ],
 
@@ -55,6 +55,12 @@ export const db = {
   },
   featured: [
     {
+      title: 'Pushpraj lifestyle',
+      img: 'assets/pushpraj.png',
+      description: 'An ecommerce website built for a local store pushpraj lifestyle here in nagpur',
+      link: "https://pushprajlifestyle.in"
+    },
+    {
       title: "Gardener",
       img: "assets/gardener.jpg",
       description: "A json based dom generator, uses recursion to generate a full dom tree of elements along with its styles and attributes, can be used in small projects where react is overkill.",
@@ -66,16 +72,19 @@ export const db = {
       description: "An asset manager that saves assets like web components, code snippets, icons etc locally on your machine while also maintaining a backup on github.",
       link: "https://github.com/ritishDas/astm",
     },
-    {
-      title: "Ritish Das Portfolio",
-      img: "assets/profile.jpg",
-      description: "A full-featured e-commerce platform with user authentication, product management, and payment integration.",
-      link: "https://github.com/ritishDas/portfolio"
-    },
 
   ],
   experience: {
-    professional: [],
+    professional: [{
+      company: "Freelance",
+      role: "Full Stack Developer",
+      duration: "March 2026 – Present",
+      address: "Nagpur, India",
+      details: [
+        "Building websites for local businesses",
+        "You can contact me if you need a website."
+      ]
+    }],
     club: [
       {
         company: "Picsel KDKCE",
@@ -120,13 +129,22 @@ export const db = {
     ]
   },
   projects: [
+
+    {
+      title: 'Pushpraj lifestyle',
+      img: 'assets/pushpraj.png',
+      description: 'An ecommerce website built for a local store pushpraj lifestyle here in nagpur.',
+      link: "https://pushprajlifestyle.in",
+      github: "",
+      tech: ["Nextjs"]
+    },
     {
       title: "Gardener",
       img: "assets/gardener.jpg",
       description: "A json based dom generator, uses recursion to generate a full dom tree of elements along with its styles and attributes, can be used in small projects where react is overkill.",
       link: "https://gardener.ritish.site",
       github: "https://github.com/ritishDas/gardener",
-      tech: ["JS"]
+      tech: ["JS", "TS", "Esbuild"]
     },
     {
       title: "Ritish Das Portfolio",
@@ -418,8 +436,8 @@ export const db = {
     courses: []
   },
   current: {
-    title: "eSelekt open elective",
-    description: "Working on the frontend of eSelekt open elective selection platform.",
-    date: '01-02-2026 - present'
+    title: "Personal Projects",
+    description: "Polishing my webdev skills and my resume by creating some projects.",
+    date: '01-05-2026 - present'
   }
 };
