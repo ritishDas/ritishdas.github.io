@@ -116,8 +116,12 @@ document.getElementById("menu-btn").addEventListener("click", () => {
 
   <!-- Divider -->
   <div class="border-t border-gray-700 mt-8 pt-6 text-center text-xs text-gray-500">
-    © 2026 Ritish Das. All rights reserved.
+    © <span id='currentYear'></span> Ritish Das. All rights reserved.
   </div>
+
+    <script>
+      document.querySelector('#currentYear').innerText = new Date().getFullYear() 
+    </script>
 </footer>
     <script src="script.js" type='module'> </script>
   </body>

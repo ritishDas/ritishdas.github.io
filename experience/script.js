@@ -15,6 +15,7 @@ const clubexpContainer = gardener({
   cn: ['flex', 'items-start', 'justify-around', 'flex-wrap', 'space-x-4']
 });
 
+
 experienceData.professional.forEach(exp => {
 
   appendElement(proexpContainer, createCard(exp));
