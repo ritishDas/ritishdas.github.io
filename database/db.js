@@ -55,6 +55,12 @@ export const db = {
   },
   featured: [
     {
+      title: 'Shelflife',
+      img: 'assets/shelflife.webp',
+      description: 'A kitchen inventory management website when roomates can manage their inventory, track waste, get notified when expiring date approaches.',
+      link: "https://shelflife.ritish.site"
+    },
+    {
       title: 'Pushpraj lifestyle',
       img: 'assets/pushpraj.webp',
       description: 'An ecommerce website built for a local store pushpraj lifestyle here in nagpur',
@@ -66,12 +72,6 @@ export const db = {
       description: "A json based dom generator, uses recursion to generate a full dom tree of elements along with its styles and attributes, can be used in small projects where react is overkill.",
       link: "https://gardener.ritish.site"
     }
-    , {
-      title: "Astm",
-      img: "assets/astm.jpg",
-      description: "An asset manager that saves assets like web components, code snippets, icons etc locally on your machine while also maintaining a backup on github.",
-      link: "https://github.com/ritishDas/astm",
-    },
 
   ],
   experience: {
@@ -130,6 +130,14 @@ export const db = {
   },
   projects: [
 
+    {
+      title: 'Shelflife',
+      img: 'assets/shelflife.webp',
+      description: 'A kitchen inventory management website when roomates can manage their inventory, track waste, get notified when expiring date approaches.',
+      link: "https://shelflife.ritish.site",
+      github: "",
+      tech: ["Mern", "Google Cloud"]
+    },
     {
       title: 'Pushpraj lifestyle',
       img: 'assets/pushpraj.webp',
