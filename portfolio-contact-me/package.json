@@ -1,0 +1,29 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "a web app build with create gardener",
+  "type": "module",
+  "scripts": {
+    "start": "node build/backend/server.js",
+    "dev": "tsx watch src/backend/server.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "ritishDas",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "nodemailer": "^8.0.10"
+  },
+
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.2",
+    "@types/nodemailer": "^8.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
