@@ -1,4 +1,13 @@
 export const db = {
+  openSource: [
+    {
+      name: 'freeCodeCamp',
+      logo: 'https://avatars.githubusercontent.com/u/9892522?s=60&v=4',
+      repo: 'https://github.com/freeCodeCamp/freeCodeCamp',
+      contribution: ['Contributed in improving there testing module by replacing regex test with abstact syntax tree based test'],
+      prs: [{ link: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/68849', no: '68849' }, { link: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/68961', no: '68961' }]
+    }
+  ],
   skills: {
     Frontend: [
       "HTML",
@@ -9,20 +18,19 @@ export const db = {
       "Next.js",
       "TailwindCSS",
       "Zustand",
-      "Vite",
-      "Responsive Design",
+      "Tanstack query"
     ],
 
     Backend: [
       "Node.js",
       "Express",
-      "REST APIs",
+      "Rest Apis",
       "MongoDB",
       "PostgreSQL",
       "Prisma",
       "drizzle",
-      "Authentication (JWT, OAuth)",
-      "WebSockets"
+      "WebSockets",
+      "Webrtc"
     ],
 
     Devops: [
@@ -41,15 +49,15 @@ export const db = {
       // "React Testing Library",
       //  "Cypress",
       "Playwright",
-      "Postman / Newman"
+      "Postman"
     ],
 
     Others: [
-      // "Agile / Scrum",
       "System Design",
       "Design Patterns",
       "Problem Solving / DSA",
-      // "API Documentation (Swagger, OpenAPI)",
+      "API Documentation (Swagger, OpenAPI)",
+      // "Agile / Scrum",
       // "Security Best Practices (OWASP)"
     ]
   },
@@ -164,14 +172,14 @@ export const db = {
       tech: ["HTML", "CSS", "JS", "gardener (my library)"]
     },
 
-    {
-      title: "Astm",
-      img: "assets/astm.jpg",
-      description: "An asset manager that saves assets like web components, code snippets, icons etc locally on your machine while also maintaining a backup on github.",
-      link: "",
-      github: "https://github.com/ritishDas/astm",
-      tech: ["C++"]
-    }
+    // {
+    //   title: "Astm",
+    //   img: "assets/astm.jpg",
+    //   description: "An asset manager that saves assets like web components, code snippets, icons etc locally on your machine while also maintaining a backup on github.",
+    //   link: "",
+    //   github: "https://github.com/ritishDas/astm",
+    //   tech: ["C++"]
+    // }
   ],
   moments: [
     [
@@ -444,8 +452,8 @@ export const db = {
     courses: []
   },
   current: {
-    title: "Personal Projects",
-    description: "Polishing my webdev skills and my resume by creating some projects.",
+    title: "Personal Projects And Open Source",
+    description: "Polishing my webdev skills and my resume by creating some projects and contributing to opensource.",
     date: '01-05-2026 - present'
   }
 };

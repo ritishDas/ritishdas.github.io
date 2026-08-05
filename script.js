@@ -145,3 +145,112 @@ replaceElement(featuredParent, container);
 
 if (db.current)
   replaceElement(fetchElement('#currentwork'), currentwork(db.current.title, db.current.date, db.current.description))
+
+
+
+const contributionContainer = fetchElement('#githubContribution');
+
+
+db.openSource.forEach(repo => {
+  appendElement(contributionContainer, gardener({
+    t: 'div',
+    cn: [
+      'rounded-xl',
+      'p-6',
+      'shadow-md',
+      'transition',
+      'hover:shadow-lg',
+      'flex',
+      'flex-col',
+      'gap-4'
+    ],
+    children: [
+      {
+        t: 'div',
+        children: [
+          {
+            t: 'h3',
+            cn: ['text-xl', 'flex', 'gap-2', 'm-2', 'font-bold', 'text-primary-300'],
+            children: [
+              {
+                t: 'img',
+                attr: { src: repo.logo, alt: repo.name },
+                cn: ['w-10']
+              },
+              {
+                t: 'span',
+                txt: repo.name
+              }
+            ]
+          },
+          {
+            t: 'a',
+            cn: [
+              'text-sm',
+              'text-primary-500',
+              'hover:underline',
+              'break-all'
+            ],
+            attr: {
+              href: repo.repo,
+              target: '_blank',
+              rel: 'noopener noreferrer'
+            },
+            txt: repo.repo
+          }
+        ]
+      },
+      {
+        t: 'div',
+        children: [
+          {
+            t: 'h4',
+            cn: ['font-semibold', 'mb-2'],
+            txt: 'Contributions'
+          },
+          {
+            t: 'ul',
+            cn: ['list-disc', 'pl-5', 'space-y-2'],
+            children: repo.contribution.map(item => ({
+              t: 'li',
+              txt: item
+            }))
+          }
+        ]
+      },
+      {
+        t: 'div',
+        children: [
+          {
+            t: 'h4',
+            cn: ['font-semibold', 'mb-2'],
+            txt: 'Pull Requests'
+          },
+          {
+            t: 'div',
+            cn: ['flex', 'flex-wrap', 'gap-2'],
+            children: repo.prs.map(pr => ({
+              t: 'a',
+              cn: [
+                'px-3',
+                'py-1',
+                'rounded-md',
+                'bg-primary-600',
+                'text-text-100',
+                'hover:bg-primary-700',
+                'transition'
+              ],
+              attr: {
+                href: pr.link,
+                target: '_blank',
+                rel: 'noopener noreferrer'
+              },
+              txt: `#${pr.no}`
+            }))
+          }
+        ]
+      }
+    ]
+  }));
+});
+
