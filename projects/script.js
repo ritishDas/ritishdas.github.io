@@ -14,7 +14,7 @@ const projectContainer = gardener({
 const database = db.projects;
 
 database.forEach(entry => {
-  const card = gardener({ t: 'div', cn: ['m-2', 'border', 'rounded-md', 'w-100'] });
+  const card = gardener({ t: 'div', cn: ['m-2', 'rounded-md', 'w-100'] });
   const top = gardener({
     t: 'div',
     children: [

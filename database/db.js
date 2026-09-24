@@ -62,24 +62,26 @@ export const db = {
     ]
   },
   featured: [
+    
     {
-      title: 'Shelflife',
-      img: 'assets/shelflife.webp',
-      description: 'A kitchen inventory management website when roomates can manage their inventory, track waste, get notified when expiring date approaches.',
-      link: "https://shelflife.ritish.site"
-    },
-    {
-      title: 'Pushpraj lifestyle',
-      img: 'assets/pushpraj.webp',
-      description: 'An ecommerce website built for a local store pushpraj lifestyle here in nagpur',
-      link: "https://pushprajlifestyle.in"
+      title: 'Nanoweb',
+      img: 'assets/nanoweb.png',
+      description: 'A lightweight HTTP web server written in pure C, featuring HTTP request parsing, dynamic route matching, and epoll-based event handling.',
+      link: "https://github.com/ritishDas/nanoweb"
     },
     {
       title: "Gardener",
       img: "assets/gardener.jpg",
       description: "A json based dom generator, uses recursion to generate a full dom tree of elements along with its styles and attributes, can be used in small projects where react is overkill.",
       link: "https://gardener.ritish.site"
-    }
+    },
+    {
+      title: 'Shelflife',
+      img: 'assets/shelflife.webp',
+      description: 'A kitchen inventory management website when roomates can manage their inventory, track waste, get notified when expiring date approaches.',
+      link: "https://shelflife.ritish.site"
+    },
+    
 
   ],
   experience: {
@@ -138,6 +140,14 @@ export const db = {
   },
   projects: [
 
+    {
+      title: 'Nanoweb',
+      img: 'assets/nanoweb.png',
+      description: 'A lightweight HTTP web server written in pure C, featuring HTTP request parsing, dynamic route matching, and epoll-based event handling.',
+      link: "https://github.com/ritishDas/nanoweb",
+      github: "https://github.com/ritishDas/nanoweb",
+      tech: ["C", "Socket Programming", "Concurrency"]
+    },
     {
       title: 'Shelflife',
       img: 'assets/shelflife.webp',
