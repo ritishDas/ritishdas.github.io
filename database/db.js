@@ -73,7 +73,7 @@ export const db = {
       title: "Gardener",
       img: "assets/gardener.jpg",
       description: "A json based dom generator, uses recursion to generate a full dom tree of elements along with its styles and attributes, can be used in small projects where react is overkill.",
-      link: "https://gardener.ritish.site"
+      link: "https://www.npmjs.com/package/create-gardener"
     },
     {
       title: 'Shelflife',
@@ -155,14 +155,6 @@ export const db = {
       link: "https://shelflife.ritish.site",
       github: "",
       tech: ["Mern", "Google Cloud"]
-    },
-    {
-      title: 'Pushpraj lifestyle',
-      img: 'assets/pushpraj.webp',
-      description: 'An ecommerce website built for a local store pushpraj lifestyle here in nagpur.',
-      link: "https://pushprajlifestyle.in",
-      github: "",
-      tech: ["Nextjs"]
     },
     {
       title: "Gardener",
