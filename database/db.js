@@ -79,7 +79,7 @@ export const db = {
       title: 'Shelflife',
       img: 'assets/shelflife.webp',
       description: 'A kitchen inventory management website when roomates can manage their inventory, track waste, get notified when expiring date approaches.',
-      link: "https://shelflife.ritish.site"
+      link: "https://shelflife-494518.web.app/"
     },
     
 
@@ -168,7 +168,7 @@ export const db = {
       title: "Gardener",
       img: "assets/gardener.jpg",
       description: "A json based dom generator, uses recursion to generate a full dom tree of elements along with its styles and attributes, can be used in small projects where react is overkill.",
-      link: "https://gardener.ritish.site",
+      link: "https://www.npmjs.com/package/create-gardener",
       github: "https://github.com/ritishDas/gardener",
       tech: ["JS", "TS", "Esbuild"]
     },
